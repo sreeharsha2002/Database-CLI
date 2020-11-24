@@ -1,41 +1,42 @@
 # IPL_DATABE
 
---HOW TO RUN THE QUERIES--
-Step-1 : Start the docker 
-
+## HOW TO RUN THE QUERIES
+* Step-1 : Start the docker 
+```
 $ docker start container_id
-    where the container_id is the id of the container you have created in docker.
+```
+* where the container_id is the id of the container you have created in docker.
 Eg: 
     docker start learn_sql
-
-Step-2 : Dump the dumpipl.sql file into MySQL
-
+* Step-2 : Dump the dumpipl.sql file into MySQL
+```
 $ mysql -h 127.0.0.1 -u root --port=5005 -p  < dumpipl.sql
+```
 Here 5005 is the port number on which the mysql is runnig.
 After entering the command you will get something like:
 
-Enter password:
+* Enter password:
 
-then enter the password of the docker container.
+* then enter the password of the docker container.
 
-This command may take a while .
+* This command may take a while .
 
 Step-3 : run the python file ipl.py using the command :-
-
+```
 $ python3 ipl.py
-
+```
 Step-4 : After runnig the python file you get something like this :
 
-Username: 
-Password:
+* Username: 
+* Password:
 
-On these enter the root (which is usually the case) in the Username and enter the password of MySQL in the password.
+* On these enter the root (which is usually the case) in the Username and enter the password of MySQL in the password.
 
-If u have entered correct credentials it shows up a message "Connected".
+* If u have entered correct credentials it shows up a message "Connected".
 
-Now you are able to use the interface to run the queries.
+* Now you are able to use the interface to run the queries.
 
---Details about the DATABASE---
+## Details about the DATABASE
 
 1. We have developed quite a friendly USER INTERFACE to let the user run queries. We have options like functionalites which include queries like selection , projection , aggregate , Search. We have analyzed data to  obtain results. We have modification functionalities : INSERT , DELETE , UPDATE. 
 
